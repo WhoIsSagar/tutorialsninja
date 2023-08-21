@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-20T20:54:19 EDT" name="Default suite" finished-at="2023-08-20T20:54:32 EDT" duration-ms="13544">
+    <groups>
+    </groups>
+    <test started-at="2023-08-20T20:54:19 EDT" name="Default test" finished-at="2023-08-20T20:54:32 EDT" duration-ms="13544">
+      <class name="com.tutorialninja.Test.LoginTest">
+        <test-method is-config="true" signature="buildUp()[pri:0, instance:com.tutorialninja.Test.LoginTest@47987356]" started-at="2023-08-20T20:54:19 EDT" name="buildUp" finished-at="2023-08-20T20:54:29 EDT" duration-ms="10343" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buildUp -->
+        <test-method signature="verifyLoginWithCorrectCridentials()[pri:0, instance:com.tutorialninja.Test.LoginTest@47987356]" started-at="2023-08-20T20:54:29 EDT" name="verifyLoginWithCorrectCridentials" finished-at="2023-08-20T20:54:30 EDT" duration-ms="1061" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithCorrectCridentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tutorialninja.Test.LoginTest@47987356]" started-at="2023-08-20T20:54:30 EDT" name="tearDown" finished-at="2023-08-20T20:54:32 EDT" duration-ms="2102" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tutorialninja.Test.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
