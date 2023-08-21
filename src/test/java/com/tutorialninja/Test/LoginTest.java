@@ -40,6 +40,9 @@ public class LoginTest {
 		String expectedLoginVerifyMessage = "Edit your account information";
 		asserts.assertTrue((accountpage.getLoginSuccessMessage()).contains(expectedLoginVerifyMessage));
 		
+		
+		
+		
 	}
 	
 	
