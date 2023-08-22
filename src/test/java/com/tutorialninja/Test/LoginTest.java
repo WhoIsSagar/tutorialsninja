@@ -7,10 +7,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.tutorialsninja.page.AccountPage;
-import com.tutorialsninja.page.HomePage;
-import com.tutorialsninja.page.LoginPage;
-import com.tutorialsninja.testBase.TestBase;
+import com.tutorialninja.page.AccountPage;
+import com.tutorialninja.page.HomePage;
+import com.tutorialninja.page.LoginPage;
+import com.tutorialninja.testBase.TestBase;
 
 public class LoginTest extends TestBase {
 

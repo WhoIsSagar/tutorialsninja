@@ -1,4 +1,4 @@
-package com.tutorialsninja.Listeners;
+package com.tutorialninja.Listeners;
 
 import java.awt.Desktop;
 import java.io.File;
@@ -12,7 +12,7 @@ import org.testng.TestListenerAdapter;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.tutorialsninja.extenreports.ExtentReportsss;
+import com.tutorialninja.extenreports.ExtentReportsss;
 
 import Utilities.Utilities;
 

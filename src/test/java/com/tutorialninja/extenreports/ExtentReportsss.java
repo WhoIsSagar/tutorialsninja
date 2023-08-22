@@ -1,4 +1,4 @@
-package com.tutorialsninja.extenreports;
+package com.tutorialninja.extenreports;
 
 import java.io.File;
 import java.io.FileInputStream;

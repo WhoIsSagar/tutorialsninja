@@ -1,4 +1,4 @@
-package com.tutorialsninja.testBase;
+package com.tutorialninja.testBase;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

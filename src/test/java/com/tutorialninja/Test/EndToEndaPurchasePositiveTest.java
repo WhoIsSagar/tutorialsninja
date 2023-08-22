@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.tutorialsninja.testBase.TestBase;
+import com.tutorialninja.testBase.TestBase;
 
 
 

@@ -13,8 +13,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.tutorialninja.testBase.TestBase;
 import com.tutorialninja.testData.FetchExcelData;
-import com.tutorialsninja.testBase.TestBase;
 
 import Utilities.Utilities;
 public class RegisterNewAccountTest extends TestBase {
