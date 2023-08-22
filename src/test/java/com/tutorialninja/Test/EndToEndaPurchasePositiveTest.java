@@ -1,10 +1,8 @@
 package com.tutorialninja.Test;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -14,7 +12,6 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.tutorialsninja.testBase.TestBase;
-import com.tutorialninja.testData.FetchExcelData;
 
 
 
@@ -26,13 +23,15 @@ public class EndToEndaPurchasePositiveTest extends TestBase {
 	public static SoftAssert asserts;
 	public static Actions action;
 	
-	
+	public EndToEndaPurchasePositiveTest() {
+		super();
+	}
 	
 
 	@BeforeMethod
 	public static void basic(){
 			TestBase base = new TestBase();
-		    driver = base.initializeBrowserAndOpenApplication(base.prop.getProperty("browser"));
+		    driver = base.initializeBrowserAndOpenApplication(prop.getProperty("browser"));
 
 		
 	}
@@ -46,8 +45,8 @@ public class EndToEndaPurchasePositiveTest extends TestBase {
 		TestBase base = new TestBase();
 		driver.findElement(By.linkText("My Account")).click();
 		driver.findElement(By.linkText("Login")).click();
-		driver.findElement(By.id("input-email")).sendKeys(base.prop.getProperty("validEmail"));
-		driver.findElement(By.id("input-password")).sendKeys(base.prop.getProperty("validPassword"));
+		driver.findElement(By.id("input-email")).sendKeys(prop.getProperty("validEmail"));
+		driver.findElement(By.id("input-password")).sendKeys(prop.getProperty("validPassword"));
 		driver.findElement(By.cssSelector("input.btn.btn-primary")).click();
 		String expectedEditYourAccountMessage = "Edit your account information";
 		String actualEditYourAccountMessage = driver.findElement(By.linkText("Edit your account information")).getText();		
@@ -77,7 +76,12 @@ public class EndToEndaPurchasePositiveTest extends TestBase {
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//span[text() = 'Shopping Cart']")).click();
 		driver.findElement(By.cssSelector("a.btn.btn-primary")).click();
-		driver.findElement(By.xpath("//input[@type = 'radio' and @value = 'new']")).click();
+		try {
+			driver.findElement(By.xpath("//input[@type = 'radio' and @value = 'new']")).click();
+		}
+		catch(NoSuchElementException e){
+			System.out.println("No Previous Adddress found");
+		}
 		driver.findElement(By.id("input-payment-firstname")).sendKeys("Singh");
 		driver.findElement(By.id("input-payment-lastname")).sendKeys("Singh");
 		driver.findElement(By.id("input-payment-address-1")).sendKeys("261 Jonga Jonga ");
@@ -89,6 +93,12 @@ public class EndToEndaPurchasePositiveTest extends TestBase {
 		select.selectByVisibleText("Ontario");
 		driver.findElement(By.xpath("//input[@class = 'btn btn-primary']")).click();
 		driver.findElement(By.id("button-payment-address")).click();
+		try {
+			driver.findElement(By.xpath("//input[@type ='radio' and @value = 'existing' and @name = 'payment_address' ]")).click();
+		}
+		catch(NoSuchElementException e) {
+			
+		}
 		driver.findElement(By.id("button-shipping-address")).click();
 		driver.findElement(By.id("button-shipping-method")).click();
 		driver.findElement(By.xpath("//input [@name ='agree' and @value = '1']")).click();
@@ -100,11 +110,10 @@ public class EndToEndaPurchasePositiveTest extends TestBase {
 		asserts.assertTrue(actualConfirmedOrderMessage.equals(expectedConfirmedOrderMessage),"Last Assertion");
 
 
+		}
 		
-		
-		
-	}
-	
+
+
 	
 	@AfterMethod
 	public static void tearDown()

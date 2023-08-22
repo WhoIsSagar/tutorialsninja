@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tutorialninja.Test.LoginTest">
+      <class name="com.tutorialninja.Test.EndToEndaPurchasePositiveTest">
         <methods>
-          <include name="buildUp"/>
+          <include name="endToEnd"/>
           <include name="tearDown"/>
-          <include name="verifyLoginWithCorrectCridentials"/>
+          <include name="basic"/>
         </methods>
-      </class> <!-- com.tutorialninja.Test.LoginTest -->
+      </class> <!-- com.tutorialninja.Test.EndToEndaPurchasePositiveTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

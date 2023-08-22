@@ -49,7 +49,7 @@ public class RegisterNewAccountTest extends TestBase {
 		driver.findElement(By.cssSelector("input.btn.btn-primary")).click();
 		String actualAccountCreationMessagedriver = driver.findElement(By.xpath("//div[@id = 'content']/child::p[1]")).getText();
 		String expectedAccountCreationMessage = "actualAccountCreationMessage";
-		AssertJUnit.assertTrue(actualAccountCreationMessagedriver.equals(expectedAccountCreationMessage));
+		asserts.assertTrue(actualAccountCreationMessagedriver.equals(expectedAccountCreationMessage));
 			
 	}
 	
@@ -62,10 +62,10 @@ public class RegisterNewAccountTest extends TestBase {
 		driver.findElement(By.cssSelector("input.btn.btn-primary")).click();
 		String actualAccountCreationMessagedriver = driver.findElement(By.xpath("//div[@id = 'content']/child::p[1]")).getText();
 		String expectedAccountCreationMessage = "actualAccountCreationMessage";
-		AssertJUnit.assertTrue(actualAccountCreationMessagedriver.equals(expectedAccountCreationMessage));
+		asserts.assertTrue(actualAccountCreationMessagedriver.equals(expectedAccountCreationMessage));
 		String actualMustAgreePrivacyPolicyMessage = driver.findElement(By.cssSelector("div.alert.alert-danger.alert-dismissible>i")).getText();
 		String expectedMustAgreePrivacyPolicyMessage = "Warning: You must agree to the Privacy Policy!";
-		AssertJUnit.assertTrue(actualMustAgreePrivacyPolicyMessage.contains(expectedMustAgreePrivacyPolicyMessage));
+		asserts.assertTrue(actualMustAgreePrivacyPolicyMessage.contains(expectedMustAgreePrivacyPolicyMessage));
 		
 		
 	}
