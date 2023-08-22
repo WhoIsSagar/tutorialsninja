@@ -18,7 +18,7 @@ public class TestBase {
 	
 	public WebDriver driver;
 	public ChromeOptions options;
-	public Properties prop;
+	public static Properties prop;
 	public FileInputStream ip;
 	
 	public TestBase() {

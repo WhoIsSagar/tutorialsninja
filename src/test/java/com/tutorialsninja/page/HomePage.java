@@ -25,11 +25,17 @@ public class HomePage {
 		myAccountButton.click();	
 	}
 	
-	public void clickOnLoginButton() {
+	public LoginPage clickOnLoginButton() {
 		loginButton.click();
+		return new LoginPage(driver);
 		
 	}
 	
+	public LoginPage navigateToLoginPage() {
+		myAccountButton.click();	
+		loginButton.click();
+		return new LoginPage(driver);
+	}
 	
 	
 	

@@ -32,9 +32,17 @@ public class LoginPage {
 		inputPasswordTextField.sendKeys(password);
 	}
 	
-	public void clickOnLoginButton() {
+	public AccountPage clickOnLoginButton() {
 		loginButton.click();
+		return new AccountPage(driver);
 	}
 	
+	public AccountPage navigateToAccountPage(String email, String password) {
+		inputEmailTextField.sendKeys(email);
+		inputPasswordTextField.sendKeys(password);
+		loginButton.click();
+		return new AccountPage(driver);
+		
+	}
 	
 }
