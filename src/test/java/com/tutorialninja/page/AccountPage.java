@@ -12,6 +12,12 @@ public class AccountPage {
 	@FindBy(xpath = "//a[text() = 'Edit your account information']")
 	private WebElement editAccounInformationLink;
 	
+	@FindBy(css = "input.form-control.input-lg")
+	private WebElement searchTab;
+	
+	@FindBy(css = "i.fa.fa-search")
+	private WebElement searchProductButton;
+	
 	public AccountPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -22,5 +28,19 @@ public class AccountPage {
 		String message = editAccounInformationLink.getText();
 		return message;
 	}
+	
+	public void typeSearchProduct(String product) {
+		searchTab.sendKeys(product);
+	}
+	
+	public void clickOnSearchButton() {
+		searchProductButton.click();
+	}
+	
+	public void searchProduct(String product) {
+		searchTab.sendKeys(product);
+		searchProductButton.click();
+	}
+	
 	
 }

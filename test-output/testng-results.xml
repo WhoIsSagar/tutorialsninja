@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-22T18:43:56 EDT" name="Default suite" finished-at="2023-08-22T18:44:24 EDT" duration-ms="27975">
+  <suite started-at="2023-08-23T06:47:30 EDT" name="Default suite" finished-at="2023-08-23T06:47:40 EDT" duration-ms="10159">
     <groups>
     </groups>
-    <test started-at="2023-08-22T18:43:56 EDT" name="Default test" finished-at="2023-08-22T18:44:24 EDT" duration-ms="27975">
-      <class name="com.tutorialninja.Test.EndToEndaPurchasePositiveTest">
-        <test-method is-config="true" signature="basic()[pri:0, instance:com.tutorialninja.Test.EndToEndaPurchasePositiveTest@5acf93bb]" started-at="2023-08-22T18:43:56 EDT" name="basic" finished-at="2023-08-22T18:44:08 EDT" duration-ms="11977" status="PASS">
+    <test started-at="2023-08-23T06:47:30 EDT" name="Default test" finished-at="2023-08-23T06:47:40 EDT" duration-ms="10159">
+      <class name="com.tutorialninja.Test.RegisterNewAccountTest">
+        <test-method is-config="true" signature="basic()[pri:0, instance:com.tutorialninja.Test.RegisterNewAccountTest@48f278eb]" started-at="2023-08-23T06:47:30 EDT" name="basic" finished-at="2023-08-23T06:47:40 EDT" duration-ms="9598" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- basic -->
-        <test-method signature="endToEnd()[pri:1, instance:com.tutorialninja.Test.EndToEndaPurchasePositiveTest@5acf93bb]" started-at="2023-08-22T18:44:08 EDT" name="endToEnd" finished-at="2023-08-22T18:44:24 EDT" duration-ms="15955" status="PASS">
+        <test-method signature="verifyRegisterWithBlankSubmission()[pri:2, instance:com.tutorialninja.Test.RegisterNewAccountTest@48f278eb]" started-at="2023-08-23T06:47:40 EDT" name="verifyRegisterWithBlankSubmission" finished-at="2023-08-23T06:47:40 EDT" duration-ms="527" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- endToEnd -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tutorialninja.Test.EndToEndaPurchasePositiveTest@5acf93bb]" started-at="2023-08-22T18:44:24 EDT" name="tearDown" finished-at="2023-08-22T18:44:24 EDT" duration-ms="1" status="PASS">
+        </test-method> <!-- verifyRegisterWithBlankSubmission -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tutorialninja.Test.RegisterNewAccountTest@48f278eb]" started-at="2023-08-23T06:47:40 EDT" name="tearDown" finished-at="2023-08-23T06:47:40 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.tutorialninja.Test.EndToEndaPurchasePositiveTest -->
+      </class> <!-- com.tutorialninja.Test.RegisterNewAccountTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

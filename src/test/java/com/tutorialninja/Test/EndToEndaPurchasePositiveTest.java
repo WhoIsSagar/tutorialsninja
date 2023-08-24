@@ -11,6 +11,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.tutorialninja.page.AccountPage;
+import com.tutorialninja.page.HomePage;
+import com.tutorialninja.page.LoginPage;
 import com.tutorialninja.testBase.TestBase;
 
 
@@ -22,6 +25,10 @@ public class EndToEndaPurchasePositiveTest extends TestBase {
 	public static Select select;
 	public static SoftAssert asserts;
 	public static Actions action;
+	public static HomePage homepage;
+	public static LoginPage loginpage;
+	public static AccountPage accountpage;
+	
 	
 	public EndToEndaPurchasePositiveTest() {
 		super();
@@ -32,6 +39,8 @@ public class EndToEndaPurchasePositiveTest extends TestBase {
 	public static void basic(){
 			TestBase base = new TestBase();
 		    driver = base.initializeBrowserAndOpenApplication(prop.getProperty("browser"));
+		    homepage = new HomePage(driver);
+		    loginpage = homepage.navigateToLoginPage();
 
 		
 	}
@@ -42,17 +51,11 @@ public class EndToEndaPurchasePositiveTest extends TestBase {
 
 		asserts = new SoftAssert();
 		action = new Actions(driver);		
-		TestBase base = new TestBase();
-		driver.findElement(By.linkText("My Account")).click();
-		driver.findElement(By.linkText("Login")).click();
-		driver.findElement(By.id("input-email")).sendKeys(prop.getProperty("validEmail"));
-		driver.findElement(By.id("input-password")).sendKeys(prop.getProperty("validPassword"));
-		driver.findElement(By.cssSelector("input.btn.btn-primary")).click();
+		accountpage = loginpage.navigateToAccountPage(prop.getProperty("validEmail"), prop.getProperty("validPassword"));
 		String expectedEditYourAccountMessage = "Edit your account information";
-		String actualEditYourAccountMessage = driver.findElement(By.linkText("Edit your account information")).getText();		
+		String actualEditYourAccountMessage = accountpage.getLoginSuccessMessage();		
 		asserts.assertTrue(actualEditYourAccountMessage.contains(expectedEditYourAccountMessage),"Firsst");
-		driver.findElement(By.cssSelector("input.form-control.input-lg")).sendKeys("HP");
-		driver.findElement(By.cssSelector("i.fa.fa-search")).click();
+		accountpage.searchProduct("HP");
 		boolean isProductPresent = driver.findElement(By.linkText("HP LP3065")).isDisplayed();
 		asserts.assertTrue(isProductPresent,"third Last");
 		driver.findElement(By.linkText("HP LP3065")).click();

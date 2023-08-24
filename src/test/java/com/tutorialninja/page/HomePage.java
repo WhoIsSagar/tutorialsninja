@@ -14,6 +14,9 @@ public class HomePage {
 	@FindBy(linkText = "Login")
 	private WebElement loginButton;
 	
+	@FindBy(linkText = "Register")
+	private WebElement registerAccount;
+	
 	
 	//initialization
 	public HomePage(WebDriver driver) {
@@ -35,6 +38,20 @@ public class HomePage {
 		myAccountButton.click();	
 		loginButton.click();
 		return new LoginPage(driver);
+		
+		
+	}
+	
+	public void clickOnRegisterPageButton() {
+		registerAccount.click();
+			
+	}
+	
+	public RegisterAccountPage navigateToRegisterPage() {
+		myAccountButton.click();
+		loginButton.click();
+		return new RegisterAccountPage(driver);
+		
 	}
 	
 	

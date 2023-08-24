@@ -24,7 +24,7 @@ public class TestBase {
 	public TestBase() {
 	    prop = new Properties();
 	    try {
-	        String filePath = "/Users/simran/eclipse-workspace/Tutorials_Ninja_Full_Project/src/test/java/com/tutorialsninja/config/config.properties";
+	        String filePath = "/Users/simran/eclipse-workspace/Tutorials_Ninja_Full_Project/src/test/java/com/tutorialninja/config/config.properties";
 	        ip = new FileInputStream(filePath);
 	    } catch (FileNotFoundException e) {
 	        e.printStackTrace();
