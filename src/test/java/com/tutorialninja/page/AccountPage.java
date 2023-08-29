@@ -37,10 +37,13 @@ public class AccountPage {
 		searchProductButton.click();
 	}
 	
-	public void searchProduct(String product) {
+	public LaptopPage searchProduct(String product) {
 		searchTab.sendKeys(product);
 		searchProductButton.click();
+		return new LaptopPage(driver);
 	}
 	
+	
+
 	
 }

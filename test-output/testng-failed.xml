@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tutorialninja.Test.RegisterNewAccountTest">
+      <class name="com.tutorialninja.Test.PurchaseTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="basic"/>
-          <include name="registerTestWithAllMendatoryFields" invocation-numbers="0"/>
+          <include name="setup"/>
+          <include name="purchasePositive"/>
         </methods>
-      </class> <!-- com.tutorialninja.Test.RegisterNewAccountTest -->
+      </class> <!-- com.tutorialninja.Test.PurchaseTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

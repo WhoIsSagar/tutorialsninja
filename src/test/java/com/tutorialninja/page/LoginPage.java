@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 
+	
 	public WebDriver driver;
 	@FindBy(id = "input-email")
 	private WebElement inputEmailTextField;

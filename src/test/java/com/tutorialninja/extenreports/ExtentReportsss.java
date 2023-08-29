@@ -28,7 +28,7 @@ public class ExtentReportsss {
             extentreport.attachReporter(reporter);
             
             prop = new Properties();
-            ip = new FileInputStream("/Users/simran/eclipse-workspace/Tutorials_Ninja_Full_Project/src/test/java/com/tutorialsninja/config/config.properties");
+            ip = new FileInputStream("/Users/simran/eclipse-workspace/Tutorials_Ninja_Full_Project/src/test/java/com/tutorialninja/config/config.properties");
             prop.load(ip);
             extentreport.setSystemInfo("application url", prop.getProperty("url"));
             extentreport.setSystemInfo("browser name", prop.getProperty("browser"));

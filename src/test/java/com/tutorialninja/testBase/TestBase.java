@@ -7,6 +7,7 @@ import java.time.Duration;
 import java.util.Arrays;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -20,6 +21,8 @@ public class TestBase {
 	public ChromeOptions options;
 	public static Properties prop;
 	public FileInputStream ip;
+	public static int day;
+	public static int year;
 	
 	public TestBase() {
 	    prop = new Properties();
@@ -58,4 +61,28 @@ public class TestBase {
 		return driver;
 	}
 
+	public void datePicker(String day, String month, String year) {
+		 this.day = Integer.parseInt(day);
+		 this.year = Integer.parseInt(year);
+		 
+		 String monthYear = driver.findElement(By.xpath("//div[@class= 'datepicker']/div[@class='datepicker-days']/table/thead/tr/th[@class='picker-switch']")).getText();
+		System.out.println(monthYear);
+		 String initialMonth = monthYear.split(" ")[0];
+		 int initialYear = Integer.parseInt((monthYear).split(" ")[1]);
+		 
+		 while(!(initialMonth.equals(month) && this.year == initialYear)) {
+			 driver.findElement(By.xpath("//div[@class= 'datepicker']/div[@class='datepicker-days']/table/thead/tr/th[@class='picker-switch']/following-sibling::th")).click();
+			  monthYear = driver.findElement(By.xpath("//div[@class= 'datepicker']/div[@class='datepicker-days']/table/thead/tr/th[@class='picker-switch']")).getText();
+			  initialMonth = monthYear.split(" ")[0];
+			  initialYear = Integer.parseInt((monthYear).split(" ")[1]);
+			
+			  
+		 }
+		 driver.findElement(By.xpath("//div[@class = 'datepicker-days']//td[@class= 'day' and text()='"+this.day+"']")).click();
+		 
+		 
+	
+		
+		 
+	}
 }

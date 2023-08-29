@@ -17,6 +17,10 @@ public class Utilities {
 	public static final int IMPLICIT_WAIT = 100;
 	public static final int PAGELOAD_TIME= 100;
 	public static final int SCRIPTLOAD_TIME = 100;
+	public static int day;
+	public static int month;
+	public static int year;
+	
 	
 	public static String getEmail() {
 		
@@ -40,4 +44,7 @@ public static String captureScreenShotCode(WebDriver driver, String testName) {
 		
 		return destinationPath;
 	}
+
+
+
 }

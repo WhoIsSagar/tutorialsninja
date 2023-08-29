@@ -1,6 +1,13 @@
+com/tutorialninja/page/HomePage.class
 com/tutorialninja/testData/FetchExcelData.class
-com/tutorialninja/Test/RegisterNewAccountTest.class
 com/tutorialninja/Test/LoginTest.class
-com/tutorialsninja/testBase/TestBase.class
+com/tutorialninja/page/AccountSuccesCreatedPage.class
+com/tutorialninja/page/RegisterAccountPage.class
+com/tutorialninja/extenreports/ExtentReportsss.class
+com/tutorialninja/page/LoginPage.class
+com/tutorialninja/Listeners/Listeners.class
+com/tutorialninja/testBase/TestBase.class
+com/tutorialninja/Test/RegisterNewAccountTest.class
+com/tutorialninja/page/AccountPage.class
 com/tutorialninja/Test/EndToEndaPurchasePositiveTest.class
 com/tutorialninja/testData/FetchExcelData$1.class
